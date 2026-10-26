@@ -1,0 +1,6 @@
+{
+  "name": "Aegis Blue Team Portfolio",
+  "description": "Defensive cybersecurity portfolio showcasing SOC engineering, SIEM detection rules, threat hunting case studies, MITRE ATT&CK coverage, and verified certifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
