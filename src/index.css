@@ -27,9 +27,12 @@
 
   html {
     font-family: var(--font-sans);
+    font-size: 16px;
     scroll-behavior: smooth;
     background-color: var(--bg-base);
     color: #E2E8F0;
+    font-kerning: normal;
+    font-feature-settings: "kern", "liga", "clig", "calt";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39,6 +42,13 @@
     background-color: var(--bg-base);
     min-height: 100vh;
     overflow-x: hidden;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
   }
 
   /* Custom sleek scrollbar */
