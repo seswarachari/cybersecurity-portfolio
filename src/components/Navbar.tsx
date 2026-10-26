@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Shield, ArrowUpRight, Menu, X, FileText, SlidersHorizontal } from 'lucide-react';
+import { Shield, ArrowUpRight, Menu, X, FileText } from 'lucide-react';
 import type { ProfileData } from '../utils/portfolioLogic';
 
 interface NavbarProps {
   profile: ProfileData;
   onOpenResume: () => void;
-  onOpenCustomizer: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   profile,
   onOpenResume,
-  onOpenCustomizer,
 }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -142,30 +140,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
 
-            {/* Customizer Gear Icon */}
-            <button
-              type="button"
-              onClick={onOpenCustomizer}
-              title="Customize Portfolio (Photo, Bio, Projects)"
-              aria-label="Customize Portfolio"
-              className="p-1.5 rounded-lg text-[#94A3B8] hover:text-[#60A5FA] bg-[#0F172A]/60 hover:bg-[#1E293B] border border-white/5 hover:border-[#3B82F6]/30 transition-all cursor-pointer"
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-            </button>
           </div>
 
           {/* Mobile Hamburger Toggle */}
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              type="button"
-              onClick={onOpenCustomizer}
-              title="Customize Portfolio"
-              aria-label="Customize Portfolio"
-              className="p-2 rounded-lg text-[#94A3B8] bg-[#0F172A] border border-white/10"
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-            </button>
-
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}

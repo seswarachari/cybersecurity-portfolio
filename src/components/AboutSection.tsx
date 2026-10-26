@@ -17,6 +17,7 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ profile }) => {
   const reduceMotion = useReducedMotion();
+  const storyBio = profile.bio.replace(/\s*\(8\.0 CGPA\)/gi, '');
 
   return (
     <section id="about" className="relative py-24 sm:py-32 bg-[#05070D] border-t border-white/5">
@@ -52,7 +53,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ profile }) => {
                 <span>MY STORY &amp; BACKGROUND</span>
               </div>
               <p className="text-base sm:text-lg text-[#F1F5F9] leading-relaxed font-sans">
-                {profile.bio}
+                {storyBio}
               </p>
             </div>
 

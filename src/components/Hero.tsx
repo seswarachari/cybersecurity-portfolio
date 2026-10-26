@@ -10,7 +10,6 @@ import {
   Clock,
   Sparkles,
   ExternalLink,
-  Upload,
 } from 'lucide-react';
 import type { ProfileData } from '../utils/portfolioLogic';
 import { INITIAL_CERTIFICATIONS } from '../data/blueTeamData';
@@ -48,13 +47,11 @@ const certificationRoadmap = [
 interface HeroProps {
   profile: ProfileData;
   onOpenResume: () => void;
-  onTriggerPhotoUpload: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   profile,
   onOpenResume,
-  onTriggerPhotoUpload,
 }) => {
   const reduceMotion = useReducedMotion();
   const [istTime, setIstTime] = useState('');
@@ -166,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({
             >
               <p className="text-base sm:text-lg font-medium text-[#93C5FD] flex items-center gap-2">
                 <Shield className="w-4 h-4 text-[#38BDF8] shrink-0" />
-                <span>{profile.clearanceOrStatus.includes('CSAP') ? 'CompTIA Security Analytics Professional (CSAP)' : profile.clearanceOrStatus}</span>
+                <span>CompTIA Security+ · CompTIA CySA+ · CompTIA Security Analytics Professional (CSAP)</span>
               </p>
               <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
                 {profile.headline}
@@ -298,17 +295,6 @@ export const Hero: React.FC<HeroProps> = ({
                   <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-ping" />
                   <span>DEFCON 5 // NORMAL OPS</span>
                 </div>
-
-                {/* Change Photo Overlay Button */}
-                <button
-                  type="button"
-                  onClick={onTriggerPhotoUpload}
-                  className="absolute top-4 left-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#05070D]/90 border border-white/20 text-[10px] font-mono text-white hover:border-[#38BDF8] cursor-pointer"
-                  title="Update portrait photo"
-                >
-                  <Upload className="w-3 h-3 text-[#38BDF8]" />
-                  <span>Change Portrait</span>
-                </button>
 
                 {/* Floating Bottom Card Over Scrim */}
                 <div className="absolute bottom-3 inset-x-3 z-10 p-3.5 rounded-xl bg-[#070D1A]/90 border border-[#38BDF8]/30 backdrop-blur-md shadow-xl">

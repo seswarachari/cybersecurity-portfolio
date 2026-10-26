@@ -57,7 +57,7 @@ export const PortSwiggerReports: React.FC = () => {
               aria-label={`Open ${report.title} PDF, ${meta.labs} labs, ${report.pagesOrFormat}`}
             >
               <div className="report-image-wrap">
-                <img src={meta.preview} alt={`${meta.title} report page preview`} loading="lazy" />
+                <img src={meta.preview} alt={`${report.title} report page preview`} loading="lazy" />
                 <span className="report-image-number">0{index + 1}</span>
                 <span className="report-open"><ArrowUpRight size={15} /> Open report</span>
               </div>

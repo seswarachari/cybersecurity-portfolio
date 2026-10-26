@@ -23,7 +23,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         <div className="projects-heading">
           <div>
             <p className="section-eyebrow"><span>03.</span> Practical projects &amp; problem solving</p>
-            <h2>What I Built &amp; The<br /><em>Real Problems They Solve ({projects.length})</em></h2>
+            <h2>Projects that solve<br /><em>real security problems.</em></h2>
             <p className="projects-intro">Every project starts with a real security problem, explains what I built in plain language, and includes code and detection rules for technical reviewers.</p>
           </div>
           <div className="projects-heading-action"><span>{String(projects.length).padStart(2, '0')} projects</span></div>
